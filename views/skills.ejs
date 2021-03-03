@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Dor's skills</title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+  </head>
+  <body>
+    <h1>My Amazing Skills</h1>
+    <h3>Please enjoy looking at my Dev skills </h3>
+    <hr>
+      <%  for(let skill of skills) { %>
+          <ul>
+            <li><%= skill.name   %></li>
+          </ul>
+      <% }%>
+  </body>
+</html>
