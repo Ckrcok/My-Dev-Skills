@@ -8,10 +8,14 @@
     <h1>My Amazing Skills</h1>
     <h3>Please enjoy looking at my Dev skills </h3>
     <hr>
-      <%  for(let skill of skills) { %>
-          <ul>
-            <li><%= skill.name   %></li>
-          </ul>
-      <% }%>
+      <ul>
+        <%  for(let skill of skills) { %>
+              <li><a href="/skills/<%= skill.id%>"><%= skill.name%></a></li>
+
+        <% }%>
+      </ul>
+
+        <a href="skills/new">Add Skill</a>
+
   </body>
 </html>

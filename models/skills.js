@@ -13,4 +13,24 @@ let skills = [
   { id: "008", name: "Catching pokemons" },
 ];
 
-module.exports = skills;
+function getAll() {
+  return skills;
+}
+
+function getOne(id) {
+  return skills.find((obj) => obj.id == id);
+}
+
+function deleteSkill(id) {
+  // Find the index based on the id of the todo object
+  const idx = skills.findIndex((skill) => skills.id === parseInt(id));
+  skills.splice(idx, 1);
+}
+
+function addOne(skill) {
+  skills.push({
+    id: Date.now() % 100000,
+    name: skill.name,
+  });
+}
+module.exports = { skills, getAll, getOne, addOne, deleteSkill };

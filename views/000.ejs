@@ -6,12 +6,11 @@
   </head>
   <body>
     <h1>My Amazing Skill</h1>
-    <h3>Please enjoy looking at my <%= skill.name   %> skill </h3>
+    <h3>Please enjoy looking at my <%= skill.name%> skill </h3>
     <hr>
 
-          <ul>
-            <li><%= skill.name   %></li>
-          </ul>
-          
+    <form  action="/skills/<%= skill.id%>?_method=DELETE" method="POST">
+      <button type="submit">Delete Da Skill</button>
+
   </body>
 </html>
