@@ -13,7 +13,8 @@ let edit = (req, res) => {
 };
 
 let update = (req, res) => {
-  skills: skills.updateSkill(req.params.id, req.body);
+  console.log(req.body);
+  skills.updateSkill(req.params.id, req.body.name);
   res.redirect("/skills");
 };
 

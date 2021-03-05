@@ -22,15 +22,16 @@ function getOne(id) {
 }
 
 function deleteSkill(id) {
-  const idx = skills.findIndex((skill) => skills.id === parseInt(id));
+  const idx = skills.findIndex((skill) => skill.id === parseInt(id));
   skills.splice(idx, 1);
 }
 
 function updateSkill(id, skill) {
-  const idx = skills.findIndex((skill) => skills.id === parseInt(id));
-
+  const idx = skills.findIndex((skill) => skill.id === parseInt(id));
   skill.id = parseInt(id);
-  skills.splice(idx, 0, skill);
+  console.log(idx);
+  console.log(skill);
+  skills.splice(idx, 1, skill);
 }
 
 function addOne(skill) {
