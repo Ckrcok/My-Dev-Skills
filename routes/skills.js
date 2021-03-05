@@ -8,5 +8,7 @@ router.get("/new", skillsCrl.giveForm);
 router.post("/submit", skillsCrl.submit);
 router.get("/:id", skillsCrl.show);
 router.delete("/:id", skillsCrl.deleteSkill);
+router.get("/:id/edit", skillsCrl.edit);
+router.put("/:id", skillsCrl.update);
 
 module.exports = router;

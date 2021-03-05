@@ -22,9 +22,15 @@ function getOne(id) {
 }
 
 function deleteSkill(id) {
-  // Find the index based on the id of the todo object
   const idx = skills.findIndex((skill) => skills.id === parseInt(id));
   skills.splice(idx, 1);
+}
+
+function updateSkill(id, skill) {
+  const idx = skills.findIndex((skill) => skills.id === parseInt(id));
+
+  skill.id = parseInt(id);
+  skills.splice(idx, 0, skill);
 }
 
 function addOne(skill) {
@@ -33,4 +39,5 @@ function addOne(skill) {
     name: skill.name,
   });
 }
-module.exports = { skills, getAll, getOne, addOne, deleteSkill };
+
+module.exports = { skills, getAll, getOne, addOne, deleteSkill, updateSkill };

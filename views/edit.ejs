@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Edit <%= skills.name %> </title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+  </head>
+  <body>
+    <h1>Editing my amazing  skill</h1>
+
+    <hr>
+
+    <form action="/skills/<%= skills.id %>?_method=PUT" method="POST" autocomplete="off">
+      <input type="text" name="skills" value="<%= skills.name %>">
+      <button type="submit">Save Da Skill</button>
+    </form>
+  </body>
+</html>
