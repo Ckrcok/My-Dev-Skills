@@ -8,13 +8,13 @@ let getSkills = (req, res) => {
 
 let edit = (req, res) => {
   res.render("edit", {
-    skills: skills.getOne(req.params.id),
+    skill: skills.getOne(req.params.id),
   });
 };
 
 let update = (req, res) => {
   console.log(req.body);
-  skills.updateSkill(req.params.id, req.body.name);
+  skills.updateSkill(req.params.id, req.body);
   res.redirect("/skills");
 };
 
